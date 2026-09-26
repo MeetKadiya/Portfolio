@@ -48,13 +48,67 @@ export const skills = [
 
 export const projects = [
   {
+    title: 'ArchInsights',
+    description:
+      'Automated codebase architectural debt visualizer and refactoring copilot. Parses multi-language ASTs (Python, JS, TS) using Tree-sitter, computes cyclomatic complexity and Halstead metrics, constructs dependency graphs, and detects critical architectural code smells with plain-English AI refactoring blueprints.',
+    stack: ['Python', 'TypeScript', 'Tree-sitter', 'FastAPI', 'React'],
+    githubUrl: 'https://github.com/MeetKadiya/ArchInsights',
+    liveUrl: '',
+    featured: true,
+  },
+  {
+    title: 'Bug Bounty Copilot',
+    description:
+      'An AI-powered reconnaissance assistant for authorized security researchers. Automates tedious recon workflows — subdomain enumeration, live-host probing, endpoint/secret discovery, and technology fingerprinting — with an AI analysis layer that summarizes attack surfaces and suggests high-value investigation paths.',
+    stack: ['Python', 'FastAPI', 'React', 'Security', 'AI/LLM'],
+    githubUrl: 'https://github.com/MeetKadiya/bugbounty-copilot',
+    liveUrl: 'https://bugbounty-copilot.vercel.app',
+    featured: true,
+  },
+  {
+    title: 'One-Click Shield',
+    description:
+      'Next-generation unified web security configuration auditor, multi-browser threat engine, and instant auto-remediation synthesizer. Engineered for Kalpvruksh 2.0 Mini Hackathon to audit hidden SSL/TLS vulnerabilities, missing HTTP security headers, and browser configuration weaknesses.',
+    stack: ['Python', 'FastAPI', 'React', 'Docker', 'Vite'],
+    githubUrl: 'https://github.com/MeetKadiya/one-click-shield',
+    liveUrl: '',
+    featured: true,
+  },
+  {
+    title: 'Student HelpDesk AI',
+    description:
+      'Cloud-based, multi-agent AI Student Help Desk built with Next.js, FastAPI, PostgreSQL, LangGraph/LangChain, and RAG. Engineered docker-first for local development and AWS-ready for production, orchestrating specialized AI agents to deliver instant, contextual academic assistance.',
+    stack: ['TypeScript', 'Next.js', 'FastAPI', 'LangGraph', 'RAG', 'PostgreSQL'],
+    githubUrl: 'https://github.com/MeetKadiya/StudentHelpdesk',
+    liveUrl: 'https://frontend-nine-jade-74.vercel.app',
+    featured: true,
+  },
+  {
+    title: 'Dashify',
+    description:
+      'Full-stack CSV analytics dashboard: automatically detects column schemas, generates interactive charts, calculates summary statistics and correlation matrices, cleans datasets, and features an integrated AI Data Analyst answering questions about uploaded data in natural language.',
+    stack: ['Python', 'FastAPI', 'React', 'Pandas', 'TypeScript'],
+    githubUrl: 'https://github.com/MeetKadiya/Dashify',
+    liveUrl: '',
+    featured: true,
+  },
+  {
+    title: 'Password Strength Analyzer',
+    description:
+      'A local-first password security analyzer, generator, and breach detection tool. Evaluates password entropy in-memory without persistent logging, featuring opt-in k-Anonymity breach verification via HaveIBeenPwned API with zero plaintext exposure.',
+    stack: ['Python', 'FastAPI', 'React', 'TypeScript', 'Tailwind CSS'],
+    githubUrl: 'https://github.com/MeetKadiya/password-strength-analyzer',
+    liveUrl: '',
+    featured: true,
+  },
+  {
     title: 'MonarchDomain',
     description:
       'A dual-purpose Bash recon tool for bug bounty and security workflows: enumerates subdomains via crt.sh and DNS brute force, then runs vulnerability checks (security headers, SSL, open ports). Supports resume, diffing between runs, stealth/rate-limit-aware requests, and optional httpx integration.',
     stack: ['Shell', 'Bash', 'curl', 'DNS', 'SSL'],
     githubUrl: 'https://github.com/MeetKadiya/MONARCHDOMAIN',
     liveUrl: '',
-    featured: true,
+    featured: false,
   },
   {
     title: 'Solo Leveling System',
@@ -63,7 +117,7 @@ export const projects = [
     stack: ['React', 'JavaScript', 'Vite', 'Tailwind CSS'],
     githubUrl: 'https://github.com/MeetKadiya/solo-leveling-system',
     liveUrl: '',
-    featured: true,
+    featured: false,
   },
   {
     title: 'Database Integration',

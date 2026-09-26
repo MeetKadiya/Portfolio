@@ -63,7 +63,7 @@ export default function Projects() {
           <SectionHeading
             eyebrow="projects"
             title="Selected work"
-            description="A few things I've built. Swap these in src/data/siteData.js with real projects and links."
+            description="A selection of my featured open-source work, security tooling, and full-stack projects."
           />
 
           <div className="mt-10 grid sm:grid-cols-2 gap-5">
