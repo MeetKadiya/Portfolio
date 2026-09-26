@@ -53,7 +53,7 @@ export const projects = [
       'Automated codebase architectural debt visualizer and refactoring copilot. Parses multi-language ASTs (Python, JS, TS) using Tree-sitter, computes cyclomatic complexity and Halstead metrics, constructs dependency graphs, and detects critical architectural code smells with plain-English AI refactoring blueprints.',
     stack: ['Python', 'TypeScript', 'Tree-sitter', 'FastAPI', 'React'],
     githubUrl: 'https://github.com/MeetKadiya/ArchInsights',
-    liveUrl: '',
+    liveUrl: 'https://archinsights-kiej.onrender.com/',
     featured: true,
   },
   {
@@ -71,7 +71,7 @@ export const projects = [
       'Next-generation unified web security configuration auditor, multi-browser threat engine, and instant auto-remediation synthesizer. Engineered for Kalpvruksh 2.0 Mini Hackathon to audit hidden SSL/TLS vulnerabilities, missing HTTP security headers, and browser configuration weaknesses.',
     stack: ['Python', 'FastAPI', 'React', 'Docker', 'Vite'],
     githubUrl: 'https://github.com/MeetKadiya/one-click-shield',
-    liveUrl: '',
+    liveUrl: 'https://one-click-shield.onrender.com/',
     featured: true,
   },
   {
