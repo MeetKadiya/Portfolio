@@ -3,8 +3,16 @@
 
 export const profile = {
   name: 'Meet Kadiya',
-  roles: ['Software Developer', 'Full-Stack Engineer', 'Problem Solver', 'Open Source Contributor'],
-  tagline: 'I build clean, reliable software — from idea to production.',
+  roles: [
+    'Cyber Security Enthusiast',
+    'Ethical Hacker',
+    'AWS & Cloud Architecture',
+    'Docker & DevOps',
+    'AI / ML Engineer',
+    'Full-Stack Developer',
+    'Problem Solver',
+  ],
+  tagline: 'Building secure cloud architectures, intelligent AI/ML systems, and robust full-stack software.',
   phone: '+91 8200518250',
   email: 'meetkadiya121@gmail.com',
   github: 'https://github.com/MeetKadiya/',
@@ -16,12 +24,14 @@ export const profile = {
 
 export const about = {
   summary: [
-    "I'm a software developer who enjoys turning ambiguous problems into working, maintainable systems. I care about readable code, sensible architecture, and shipping things that hold up in production — not just in a demo.",
-    "My day-to-day spans the full stack: designing APIs, building responsive interfaces, and setting up the pipelines that get code from a laptop to a live server without drama.",
+    "I'm a software developer and security enthusiast focused on cybersecurity, ethical hacking, cloud infrastructure, and AI/ML. I build systems that are performant, scalable, and secure by design.",
+    "My work spans containerized cloud deployments with AWS and Docker, building intelligent multi-agent AI systems, conducting web security audits and vulnerability reconnaissance, and crafting responsive full-stack applications with clean architecture.",
   ],
   highlights: [
-    { label: 'Focus', value: 'Full-stack web development' },
-    { label: 'Approach', value: 'Clean architecture, tested code' },
+    { label: 'Primary Focus', value: 'Cybersecurity, Cloud & AI/ML' },
+    { label: 'Cloud & DevOps', value: 'AWS, Docker, Linux, CI/CD' },
+    { label: 'Security', value: 'Ethical Hacking, OWASP, Recon' },
+    { label: 'AI & Data', value: 'LLMs, LangGraph, RAG, Python' },
     { label: 'Currently', value: 'Open to new opportunities' },
     { label: 'Based in', value: 'India' },
   ],
@@ -29,20 +39,56 @@ export const about = {
 
 export const skills = [
   {
-    category: 'Languages',
-    items: ['JavaScript', 'Python', 'Bash', 'HTML', 'CSS'],
+    category: 'Cybersecurity & Ethical Hacking',
+    items: [
+      'Ethical Hacking',
+      'Penetration Testing',
+      'Web App Security',
+      'OWASP Top 10',
+      'Vulnerability Assessment',
+      'Reconnaissance',
+      'DNS & SSL/TLS Auditing',
+      'Burp Suite',
+      'Network Security',
+    ],
   },
   {
-    category: 'Frontend',
-    items: ['React', 'Vite', 'Tailwind CSS', 'HTML5', 'CSS3'],
+    category: 'Cloud & DevOps',
+    items: [
+      'AWS (EC2, S3, IAM)',
+      'Docker',
+      'Containerization',
+      'Linux / Bash Scripting',
+      'CI/CD Pipelines',
+      'Git & GitHub Actions',
+      'Cloud Deployment',
+    ],
   },
   {
-    category: 'Backend',
-    items: ['Flask', 'REST APIs', 'SQLite', 'Node.js'],
+    category: 'AI / ML & Data',
+    items: [
+      'AI / ML Engineering',
+      'LLM Integration',
+      'LangGraph & LangChain',
+      'RAG Architecture',
+      'Multi-Agent Systems',
+      'Python',
+      'Pandas',
+      'Tree-sitter AST',
+    ],
   },
   {
-    category: 'Security & Tools',
-    items: ['Bash Scripting', 'DNS & SSL', 'Git', 'Docker', 'Linux'],
+    category: 'Full-Stack Development',
+    items: [
+      'FastAPI',
+      'Flask',
+      'Node.js',
+      'React',
+      'TypeScript / JavaScript',
+      'Tailwind CSS',
+      'PostgreSQL',
+      'REST APIs',
+    ],
   },
 ];
 
@@ -51,7 +97,7 @@ export const projects = [
     title: 'ArchInsights',
     description:
       'Automated codebase architectural debt visualizer and refactoring copilot. Parses multi-language ASTs (Python, JS, TS) using Tree-sitter, computes cyclomatic complexity and Halstead metrics, constructs dependency graphs, and detects critical architectural code smells with plain-English AI refactoring blueprints.',
-    stack: ['Python', 'TypeScript', 'Tree-sitter', 'FastAPI', 'React'],
+    stack: ['Python', 'TypeScript', 'AI / ML', 'FastAPI', 'Tree-sitter', 'React'],
     githubUrl: 'https://github.com/MeetKadiya/ArchInsights',
     liveUrl: 'https://archinsights-kiej.onrender.com/',
     featured: true,
@@ -78,7 +124,7 @@ export const projects = [
     title: 'Student HelpDesk AI',
     description:
       'Cloud-based, multi-agent AI Student Help Desk built with Next.js, FastAPI, PostgreSQL, LangGraph/LangChain, and RAG. Engineered docker-first for local development and AWS-ready for production, orchestrating specialized AI agents to deliver instant, contextual academic assistance.',
-    stack: ['TypeScript', 'Next.js', 'FastAPI', 'LangGraph', 'RAG', 'PostgreSQL'],
+    stack: ['TypeScript', 'Next.js', 'FastAPI', 'AWS', 'Docker', 'LangGraph', 'RAG'],
     githubUrl: 'https://github.com/MeetKadiya/StudentHelpdesk',
     liveUrl: 'https://frontend-nine-jade-74.vercel.app',
     featured: true,
@@ -105,7 +151,7 @@ export const projects = [
     title: 'MonarchDomain',
     description:
       'A dual-purpose Bash recon tool for bug bounty and security workflows: enumerates subdomains via crt.sh and DNS brute force, then runs vulnerability checks (security headers, SSL, open ports). Supports resume, diffing between runs, stealth/rate-limit-aware requests, and optional httpx integration.',
-    stack: ['Shell', 'Bash', 'curl', 'DNS', 'SSL'],
+    stack: ['Bash', 'Ethical Hacking', 'Recon', 'DNS', 'SSL'],
     githubUrl: 'https://github.com/MeetKadiya/MONARCHDOMAIN',
     liveUrl: '',
     featured: false,

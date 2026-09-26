@@ -1,56 +1,59 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 /**
- * Types out each string in `words`, pauses, deletes, moves to next.
- * Respects prefers-reduced-motion by just cycling text instantly.
+ * Types out each string in `words`, pauses, deletes, and moves to the next.
  */
-export function useTypewriter(words, { typeSpeed = 65, deleteSpeed = 35, pause = 1400 } = {}) {
+export function useTypewriter(
+  words = [],
+  {
+    typeSpeed = 70,
+    deleteSpeed = 35,
+    pause = 1800,
+    pauseBeforeType = 400,
+  } = {}
+) {
   const [index, setIndex] = useState(0);
   const [text, setText] = useState('');
-  const [phase, setPhase] = useState('typing'); // typing | pausing | deleting
+  const [phase, setPhase] = useState('typing'); // 'typing' | 'deleting'
 
-  const reduced =
-    typeof window !== 'undefined' &&
-    window.matchMedia &&
-    window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const wordsRef = useRef(words);
+  useEffect(() => {
+    wordsRef.current = words;
+  }, [words]);
 
   useEffect(() => {
-    if (reduced) {
-      const timer = setInterval(() => {
-        setIndex((i) => (i + 1) % words.length);
-      }, 2200);
-      return () => clearInterval(timer);
-    }
-  }, [reduced, words.length]);
+    const list = wordsRef.current;
+    if (!list || list.length === 0) return;
 
-  useEffect(() => {
-    if (reduced) {
-      setText(words[index]);
-      return;
-    }
-
-    const current = words[index % words.length];
-    let timeout;
+    const currentWord = list[index % list.length] || '';
+    let timer;
 
     if (phase === 'typing') {
-      if (text.length < current.length) {
-        timeout = setTimeout(() => setText(current.slice(0, text.length + 1)), typeSpeed);
+      if (text.length < currentWord.length) {
+        timer = setTimeout(() => {
+          setText(currentWord.slice(0, text.length + 1));
+        }, typeSpeed);
       } else {
-        timeout = setTimeout(() => setPhase('pausing'), pause);
+        timer = setTimeout(() => {
+          setPhase('deleting');
+        }, pause);
       }
-    } else if (phase === 'pausing') {
-      timeout = setTimeout(() => setPhase('deleting'), 0);
     } else if (phase === 'deleting') {
       if (text.length > 0) {
-        timeout = setTimeout(() => setText(current.slice(0, text.length - 1)), deleteSpeed);
+        timer = setTimeout(() => {
+          setText(currentWord.slice(0, text.length - 1));
+        }, deleteSpeed);
       } else {
-        setIndex((i) => (i + 1) % words.length);
-        setPhase('typing');
+        timer = setTimeout(() => {
+          setIndex((prev) => (prev + 1) % list.length);
+          setPhase('typing');
+        }, pauseBeforeType);
       }
     }
 
-    return () => clearTimeout(timeout);
-  }, [text, phase, index, words, typeSpeed, deleteSpeed, pause, reduced]);
+    return () => clearTimeout(timer);
+  }, [text, phase, index, typeSpeed, deleteSpeed, pause, pauseBeforeType]);
 
   return text;
 }
+

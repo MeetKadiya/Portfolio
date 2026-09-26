@@ -72,10 +72,10 @@ export default function Hero() {
             {profile.name}
           </h1>
 
-          <div className="mt-4 h-8 flex items-center">
-            <span className="font-mono text-accent text-lg">$</span>
+          <div className="mt-4 min-h-[2rem] flex items-center" aria-live="polite">
+            <span className="font-mono text-accent text-lg select-none">$</span>
             <span className="font-mono text-lg text-text ml-2">{typed}</span>
-            <span className="w-2.5 h-6 bg-accent ml-1 animate-blink" aria-hidden="true" />
+            <span className="inline-block w-2.5 h-6 bg-accent ml-1 animate-blink" aria-hidden="true" />
           </div>
 
           <p className="mt-6 text-muted text-lg max-w-md">{profile.tagline}</p>
