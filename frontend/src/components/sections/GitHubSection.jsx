@@ -5,7 +5,7 @@ import { useScrollReveal } from '../../hooks/useScrollReveal';
 
 // Precomputed fallback stats from MeetKadiya's GitHub profile
 const DEFAULT_STATS = {
-  repos: 19,
+  repos: 20,
   followers: 5,
   following: 4,
   stars: 0,

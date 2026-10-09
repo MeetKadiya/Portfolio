@@ -94,6 +94,15 @@ export const skills = [
 
 export const projects = [
   {
+    title: 'AegisTwin',
+    description:
+      'Enterprise AI cyber attack digital twin and SOC platform. Features autonomous red team adversary simulation, Purdue Level 0-4 OT/ICS topology modeling in Neo4j, MITRE ATT&CK mapping, automated SOAR remediation, and a cryptographically chained Merkle audit ledger.',
+    stack: ['Python', 'FastAPI', 'Next.js', 'Neo4j', 'Docker', 'Security'],
+    githubUrl: 'https://github.com/MeetKadiya/AegisTwin',
+    liveUrl: '',
+    featured: true,
+  },
+  {
     title: 'ArchInsights',
     description:
       'Automated codebase architectural debt visualizer and refactoring copilot. Parses multi-language ASTs (Python, JS, TS) using Tree-sitter, computes cyclomatic complexity and Halstead metrics, constructs dependency graphs, and detects critical architectural code smells with plain-English AI refactoring blueprints.',
@@ -145,7 +154,7 @@ export const projects = [
     stack: ['Python', 'FastAPI', 'React', 'TypeScript', 'Tailwind CSS'],
     githubUrl: 'https://github.com/MeetKadiya/password-strength-analyzer',
     liveUrl: '',
-    featured: true,
+    featured: false,
   },
   {
     title: 'MonarchDomain',
